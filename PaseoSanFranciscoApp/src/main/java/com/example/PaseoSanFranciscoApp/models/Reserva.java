@@ -1,13 +1,18 @@
 package com.example.PaseoSanFranciscoApp.models;
 
 import jakarta.persistence.Id;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.Table;
 
+@Entity
+@Table(name = "reservas")
 public class Reserva {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
+    
     private String id;
     private String fecha_reserva;
     private int tiempo;
