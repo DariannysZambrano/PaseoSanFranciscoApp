@@ -29,7 +29,7 @@ public class UsuarioControlador {
 
     //funcion para controlar el guardado
     @PostMapping
-    public ResponseEntity<?>ControlarGuardado(@RequestBody Usuario datos){
+    public ResponseEntity<Usuario>ControlarGuardado(@RequestBody Usuario datos){
         return ResponseEntity
         .status(HttpStatus.CREATED)
         .body(this.servicio.guardarUsuarioEnBD(datos));
